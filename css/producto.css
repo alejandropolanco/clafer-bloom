@@ -1,0 +1,133 @@
+/* ========== PRODUCTO DETALLE ========== */
+.producto {
+  padding: 120px 0 80px;
+  min-height: 80vh;
+}
+
+.producto__back {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--primary);
+  transition: var(--transition);
+  font-size: 0.95rem;
+}
+
+.producto__back:hover {
+  color: var(--secondary);
+  transform: translateX(-5px);
+}
+
+.producto__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* ========== IMAGEN ========== */
+.producto__image {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.producto__image-placeholder {
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.producto__image-placeholder svg {
+  width: 100px;
+  height: 100px;
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+/* ========== INFO ========== */
+.producto__info {
+  padding-top: 10px;
+}
+
+.producto__name {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 20px;
+}
+
+.producto__price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+.producto__price-note {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.producto__desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 35px;
+}
+
+.producto__nota {
+  display: inline-block;
+  background: #FFF3CD;
+  color: #856404;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.producto__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.producto__btn-whatsapp {
+  width: 100%;
+}
+
+/* ========== NOT FOUND ========== */
+.producto__not-found {
+  text-align: center;
+  padding: 100px 20px;
+  grid-column: 1 / -1;
+}
+
+.producto__not-found h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.producto__not-found p {
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+/* ========== RESPONSIVE PRODUCTO ========== */
+@media (max-width: 768px) {
+  .producto__content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .producto__image-placeholder {
+    height: 300px;
+  }
+
+  .producto__actions {
+    flex-direction: column;
+  }
+}
