@@ -4,16 +4,16 @@ window.PRODUCTOS = [
     nombre: "Ramo de Flores Eternas",
     descripcion: "Hermosos ramos hechos con flores eternas, personalizables en colores y tamaños. Ideales para sorprender en cualquier ocasión.",
     precio_desde: 25000,
-    imagen: "assets/images/ramo-flores.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Ramo de Flores Eternas. ¿Podrían darme más información?"
+    imagen: "../assets/images/flores_eternas.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Ramo de Flores Eternas. ¿Podrías darme más información?"
   },
   {
     id: 2,
     nombre: "Desayuno Sorpresa",
     descripcion: "Desayunos sorpresa armados con todo el detalle para esa persona especial. Incluye variedad de alimentos, decoración y presentación única.",
     precio_desde: 70000,
-    imagen: "assets/images/desayuno.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Desayuno Sorpresa. ¿Podrían darme más información?"
+    imagen: "../assets/images/Desayuno.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Desayuno Sorpresa. ¿Podrías darme más información?"
   },
   {
     id: 3,
@@ -21,47 +21,49 @@ window.PRODUCTOS = [
     descripcion: "Arreglos decorativos personalizados para fiestas y eventos. Creamos el ambiente perfecto para tu celebración.",
     precio_desde: 150000,
     nota: "Precio exento de materiales",
-    imagen: "assets/images/arreglos.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Arreglo de Fiesta. ¿Podrían darme más información?"
+    imagen: "../assets/images/decoracion.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Arreglo de Fiesta. ¿Podrías darme más información?"
   },
   {
     id: 4,
     nombre: "Osos de Flores Eternas",
     descripcion: "Adorables osos hechos con flores eternas, el regalo perfecto para expresar amor y cariño de una forma única y duradera.",
     precio_desde: 50000,
-    imagen: "assets/images/osos.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Oso de Flores Eternas. ¿Podrían darme más información?"
+    imagen: "../assets/images/oso_flores.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Oso de Flores Eternas. ¿Podrías darme más información?"
   },
   {
     id: 5,
-    nombre: "Cajas de Chocolates",
-    descripcion: "Cajas artesanales con una selección de los mejores chocolates. Perfectas para regalar en fechas especiales.",
+    nombre: "Flores de Chelin",
+    descripcion: "Elegantes arreglos de flores frescas y eternas, perfectos para regalar en cualquier ocasión especial. Personalizables en colores y estilo.",
     precio_desde: 30000,
-    imagen: "assets/images/chocolates.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa la Caja de Chocolates. ¿Podrían darme más información?"
+    imagen: "../assets/images/flores_chelines.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el arreglo de Flores de Chelin. ¿Podrías darme más información?"
   },
   {
     id: 6,
     nombre: "Globos y Decoración",
     descripcion: "Arreglos con globos y elementos decorativos para toda clase de eventos: cumpleaños, baby showers, graduaciones y más.",
     precio_desde: 40000,
-    imagen: "assets/images/globos.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa los Globos y Decoración. ¿Podrían darme más información?"
+    imagen: "../assets/images/peluche_globo.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa los Globos y Decoración. ¿Podrías darme más información?"
   },
   {
     id: 7,
     nombre: "Rosas Eternas en Caja",
     descripcion: "Elegantes rosas eternas presentadas en cajas premium. Un detalle sofisticado y atemporal para quienes buscan algo especial.",
     precio_desde: 30000,
-    imagen: "assets/images/rosas-caja.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa las Rosas Eternas en Caja. ¿Podrían darme más información?"
+    imagen: "../assets/images/caja_con_flores.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa las Rosas Eternas en Caja. ¿Podrías darme más información?"
   },
   {
     id: 8,
     nombre: "Set de Detalles Personalizados",
     descripcion: "Sets completamente personalizados según tu necesidad y presupuesto. Cada pieza es única y está pensada para ti.",
     precio_mostrar: "A consultar",
-    imagen: "assets/images/set-personalizado.webp",
-    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa un Set de Detalles Personalizados. ¿Podrían darme más información?"
+    imagen: "../assets/images/set_detalles.jpeg",
+    msg_whatsapp: "Hola, veo que les interesa la marca, me interesa un Set de Detalles Personalizados. ¿Podrías darme más información?"
   }
 ];
+
+

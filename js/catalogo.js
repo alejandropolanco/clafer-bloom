@@ -21,8 +21,8 @@ function renderizarProductos(productos) {
     const card = document.createElement('div');
     card.className = `product-card reveal delay-${index + 1}`;
     card.innerHTML = `
-      <div class="product-card__image-placeholder">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      <div class="product-card__image">
+        <img src="${producto.imagen}" alt="${producto.nombre}" class="product-card__img">
       </div>
       <div class="product-card__body">
         <h3 class="product-card__name">${producto.nombre}</h3>
