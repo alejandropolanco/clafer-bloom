@@ -1,0 +1,378 @@
+/* ========== TEMPORADA DE GRADOS: SECCIÓN Y TARJETAS ========== */
+
+.grados {
+  position: relative;
+  padding: 96px 0 100px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(193, 151, 210, 0.32) 0%, transparent 34%),
+    radial-gradient(circle at 88% 84%, rgba(193, 151, 210, 0.26) 0%, transparent 38%),
+    linear-gradient(135deg, #3B0F40 0%, #581C5C 48%, #7A3E8C 100%);
+}
+
+.grados::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1.5px);
+  background-size: 28px 28px;
+  opacity: 0.5;
+  -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(circle at 50% 45%, #000 0%, transparent 72%);
+  pointer-events: none;
+}
+
+.grados::after {
+  content: '';
+  position: absolute;
+  top: -160px;
+  left: 50%;
+  width: 640px;
+  height: 320px;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.16), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.grados .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Encabezado ---------- */
+.grados__header {
+  max-width: 720px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+.grados__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.grados__title {
+  margin-bottom: 12px;
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.18);
+}
+
+.grados__subtitle {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(0.98rem, 1.6vw, 1.08rem);
+}
+
+/* ---------- Grid (flex centrado para 3 + 2) ---------- */
+.grados__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.grado-card {
+  flex: 0 1 calc((100% - 56px) / 3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  background: var(--white);
+  box-shadow: 0 18px 40px rgba(24, 4, 28, 0.28);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.grado-card:hover,
+.grado-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 55px rgba(24, 4, 28, 0.38);
+}
+
+/* ---------- Media ---------- */
+.grado-card__media {
+  position: relative;
+  height: 215px;
+  overflow: hidden;
+  background: var(--light);
+}
+
+.grado-card__media > * {
+  width: 100%;
+  height: 100%;
+}
+
+.grado-media__img {
+  display: block;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.grado-card:hover .grado-media__img {
+  transform: scale(1.05);
+}
+
+/* ---------- Placeholder elegante ---------- */
+.grado-ph {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  overflow: hidden;
+  color: var(--white);
+  background: linear-gradient(135deg, #C197D2 0%, #8E5BA6 100%);
+  transition: transform 0.6s ease;
+}
+
+.grado-card:hover .grado-ph {
+  transform: scale(1.05);
+}
+
+.grado-ph::before {
+  content: '';
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(circle at 28% 20%, rgba(255, 255, 255, 0.38), transparent 52%),
+    radial-gradient(circle at 78% 82%, rgba(45, 14, 47, 0.28), transparent 55%),
+    radial-gradient(circle at 50% 58%, rgba(45, 14, 47, 0.22), transparent 62%);
+}
+
+.grado-ph::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.14) 50%, transparent 60%);
+}
+
+.grado-ph--figura {
+  background: linear-gradient(135deg, #C197D2 0%, #8E5BA6 100%);
+}
+
+.grado-ph--peluche {
+  background: linear-gradient(135deg, #E0B4EE 0%, #A46FBC 100%);
+}
+
+.grado-ph--ramo {
+  background: linear-gradient(135deg, #B98ACB 0%, #6E3B82 100%);
+}
+
+.grado-ph--endulzada {
+  background: linear-gradient(135deg, #D8A6E6 0%, #9A6EB3 100%);
+}
+
+.grado-ph--caja {
+  background: linear-gradient(135deg, #9A6EB3 0%, #4B1450 100%);
+}
+
+.grado-ph--vaso {
+  background: linear-gradient(135deg, #C9A0E8 0%, #6E3B82 100%);
+}
+
+.grado-ph__icon {
+  position: relative;
+  z-index: 1;
+  width: 78px;
+  height: 78px;
+  opacity: 0.95;
+  filter: drop-shadow(0 8px 16px rgba(45, 14, 47, 0.28));
+}
+
+.grado-ph__label {
+  position: relative;
+  z-index: 1;
+  padding: 0 18px;
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(45, 14, 47, 0.45);
+}
+
+.grado-ph__cap {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1;
+  width: 26px;
+  height: 26px;
+  opacity: 0.8;
+}
+
+/* ---------- Cuerpo de la tarjeta ---------- */
+.grado-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px 22px 24px;
+}
+
+.grado-card__name {
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 1.12rem;
+  line-height: 1.35;
+}
+
+.grado-card__desc {
+  display: -webkit-box;
+  margin-bottom: 16px;
+  overflow: hidden;
+  color: var(--text-light);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.grado-card__price {
+  align-self: flex-start;
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: var(--light);
+  color: var(--secondary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.grado-card__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.grado-card__btn {
+  display: inline-flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 9px;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.grado-card__btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.grado-card__btn--detail {
+  background: var(--light);
+  color: var(--primary);
+}
+
+.grado-card__btn--detail:hover {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.grado-card__btn--whatsapp {
+  background: #25D366;
+  color: var(--white);
+}
+
+.grado-card__btn--whatsapp:hover {
+  background: #1da851;
+}
+
+.grado-card__btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* ---------- CTA hacia la página de Grados ---------- */
+.grados__more {
+  margin-top: 38px;
+  text-align: center;
+}
+
+.grados__more-btn {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  background: transparent;
+  color: var(--white);
+}
+
+.grados__more-btn:hover {
+  background: var(--white);
+  color: var(--primary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .grados {
+    padding: 80px 0 84px;
+  }
+
+  .grado-card {
+    flex-basis: calc((100% - 28px) / 2);
+  }
+}
+
+@media (max-width: 680px) {
+  .grados {
+    padding: 64px 0 70px;
+  }
+
+  .grados__header {
+    margin-bottom: 38px;
+  }
+
+  .grados__grid {
+    gap: 20px;
+  }
+
+  .grado-card {
+    flex-basis: 100%;
+  }
+
+  .grado-card__media {
+    height: 200px;
+  }
+
+  .grado-card__body {
+    padding: 20px 20px 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grado-card,
+  .grado-ph,
+  .grado-media__img {
+    transition: none;
+  }
+
+  .grado-card:hover,
+  .grado-card:focus-within,
+  .grado-card:hover .grado-ph,
+  .grado-card:hover .grado-media__img {
+    transform: none;
+  }
+}

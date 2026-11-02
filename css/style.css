@@ -17,6 +17,7 @@
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Lato', sans-serif;
   --max-width: 1200px;
+  --header-height: 66px;
 }
 
 /* ========== RESET ========== */
@@ -75,15 +76,26 @@ h1, h2, h3, h4 {
   z-index: 1000;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
-  transition: var(--transition);
+  transition:
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+.header--glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 4px 24px rgba(88, 28, 92, 0.12);
 }
 
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 9px 20px;
 }
 
 .header__logo {
@@ -92,7 +104,7 @@ h1, h2, h3, h4 {
 }
 
 .header__logo img {
-  height: 65px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   border-radius: 100px;
@@ -111,12 +123,12 @@ h1, h2, h3, h4 {
 
 .header__nav {
   display: flex;
-  gap: 30px;
+  gap: 26px;
 }
 
 .header__nav a {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--primary);
   position: relative;
   padding: 5px 0;
@@ -387,7 +399,7 @@ h1, h2, h3, h4 {
 
   .header__nav {
     position: fixed;
-    top: 70px;
+    top: var(--header-height);
     left: 0;
     width: 100%;
     flex-direction: column;

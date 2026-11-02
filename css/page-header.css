@@ -1,0 +1,23 @@
+/* ========== PAGE HEADER COMPARTIDO ========== */
+.page-header {
+  padding: 110px 0 60px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  text-align: center;
+}
+
+.page-header__title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.page-header__subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    padding: 95px 0 40px;
+  }
+}

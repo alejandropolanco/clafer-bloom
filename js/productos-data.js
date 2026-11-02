@@ -28,7 +28,7 @@ window.PRODUCTOS = [
     id: 4,
     nombre: "Osos de Flores Eternas",
     descripcion: "Adorables osos hechos con flores eternas, el regalo perfecto para expresar amor y cariño de una forma única y duradera.",
-    precio_desde: 50000,
+    precio_desde: 60000,
     imagen: "../assets/images/oso_flores.jpeg",
     msg_whatsapp: "Hola, veo que les interesa la marca, me interesa el Oso de Flores Eternas. ¿Podrías darme más información?"
   },

@@ -7,6 +7,8 @@
   <meta name="description" content="Clafer Bloom - Ramos de flores eternas, desayunos sorpresa, arreglos de fiesta y detalles únicos para toda ocasión.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/grados.css">
+  <link rel="stylesheet" href="css/grados-modal.css">
 </head>
 <body>
 
@@ -17,6 +19,7 @@
       <nav class="header__nav" id="nav">
         <a href="index.html" class="active">Inicio</a>
         <a href="pages/catalogo.html">Catálogo</a>
+        <a href="pages/grados.html">Grados</a>
         <a href="pages/contacto.html">Contacto</a>
       </nav>
       <button class="header__hamburger" id="hamburger" aria-label="Menú">
@@ -89,6 +92,23 @@
     </div>
   </section>
 
+  <!-- TEMPORADA DE GRADOS -->
+  <section class="grados" id="grados" aria-labelledby="grados-title">
+    <div class="container">
+      <div class="grados__header">
+        <span class="grados__badge reveal delay-1">🎓 Temporada de grados</span>
+        <h2 class="grados__title reveal delay-2" id="grados-title">Temporada de Grados</h2>
+        <p class="grados__subtitle reveal delay-3">Celebra el logro con detalles que se quedan en la memoria</p>
+      </div>
+      <div class="grados__grid" id="grados-grid" data-img-base="">
+        <!-- Se llena dinámicamente con JS -->
+      </div>
+      <div class="grados__more reveal">
+        <a href="pages/grados.html" class="btn grados__more-btn">Ver página de Grados</a>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA WHATSAPP -->
   <section class="cta">
     <div class="container">
@@ -128,5 +148,9 @@
   </a>
 
   <script src="js/main.js"></script>
+  <script src="js/grados-data.js"></script>
+  <script src="js/grados-render.js"></script>
+  <script src="js/grados-modal.js"></script>
+  <script src="js/grados.js"></script>
 </body>
 </html>

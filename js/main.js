@@ -10,6 +10,11 @@ const header = document.getElementById('header');
 if (hamburger && nav) {
   hamburger.addEventListener('click', () => {
     document.body.classList.toggle('nav-open');
+
+    // El menú móvil siempre se lee sobre fondo blanco.
+    if (document.body.classList.contains('nav-open') && header) {
+      header.classList.remove('header--glass');
+    }
   });
 
   // Cerrar menu al hacer click en un link
@@ -20,21 +25,38 @@ if (hamburger && nav) {
   });
 }
 
-// ========== HEADER SCROLL ==========
-let lastScroll = 0;
+// ========== HEADER SCROLL (CRISTAL AL BAJAR) ==========
+let lastScroll = window.pageYOffset;
+let headerTicking = false;
 
-window.addEventListener('scroll', () => {
-  if (!header) return;
+function updateHeaderState() {
+  if (!header) {
+    headerTicking = false;
+    return;
+  }
+
   const currentScroll = window.pageYOffset;
+  const delta = currentScroll - lastScroll;
+  const navOpen = document.body.classList.contains('nav-open');
 
-  if (currentScroll > 100) {
-    header.style.boxShadow = '0 4px 30px rgba(88, 28, 92, 0.2)';
-  } else {
-    header.style.boxShadow = '0 4px 20px rgba(88, 28, 92, 0.15)';
+  if (navOpen) {
+    header.classList.remove('header--glass');
+  } else if (currentScroll > 80 && delta > 4) {
+    header.classList.add('header--glass');
+  } else if (delta < -4 || currentScroll <= 80) {
+    header.classList.remove('header--glass');
   }
 
   lastScroll = currentScroll;
-});
+  headerTicking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!headerTicking) {
+    window.requestAnimationFrame(updateHeaderState);
+    headerTicking = true;
+  }
+}, { passive: true });
 
 // ========== SCROLL REVEAL (Intersection Observer) ==========
 function initScrollReveal() {
